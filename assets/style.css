@@ -1,0 +1,33 @@
+@import url('https://fonts.googleapis.com/css?family=Karla');
+
+body {
+    color: white;
+    background-color: #00a3c7;
+}
+
+* {
+    font-family: 'Karla', 'Whitney', sans-serif;
+    font-weight: normal;
+}
+
+.center-all {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    text-align: center;
+}
+
+button, .button {
+    padding: 7px;
+    border: 1px solid white;
+    border-radius: 5px;
+    color: white;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+button:hover, .button:hover {
+    background-color: white;
+    color: #00a3c7;
+}
