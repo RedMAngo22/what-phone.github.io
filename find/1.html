@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <title>What phone?</title>
+ <link rel="stylesheet" href="/assets/style.css">
+ <link rel="stylesheet" href="/assets/nouislider.css">
+ <link rel="icon" href="/assets/icon.png">
+ <meta name="viewport" content="width=device-width, initial-scale=1">
+ <script async src="https://use.fontawesome.com/f47a842f2a.js"></script>
+</head>
+<body class="alt-body-color-2">
+    <script src="/assets/nouislider.min.js"></script>
+     <div class="center-all">
+        <h1>
+            <img src="/assets/icons8-coin.png" draggable="false"><br>
+            How much do you want to spend?
+        </h1>
+        <h2>New phones can range in price from around $150 US, and can even reach up to $1000 US.</h2><br>
+        <div id="slider"></div>
+        <script async>
+            var slider = document.getElementById("slider");
+            slider.style.margin = "0px 30px";
+            noUiSlider.create(slider, {
+                range: {
+                    'min':150,
+                    'max':1000,
+                },
+                start: [350, 700],
+                margin: 100,
+                limit: 700,
+                connect: true,
+                step: 50,
+                pips: {
+                    mode: 'steps',
+                    stepped: true,
+                    density: 4
+                }
+            })
+        </script>
+        <a class="button" style="position: relative; top: 50px;" href="2.html">Next</a>
+    </div>
+    <footer>
+        <p><i class="fa fa-code"></i> Powered by <b>Open-Sourced Software</b></p>
+        <p class="right"><a>About</a> &mdash; <a>Credits</a> &mdash; <a>Terms</a></p>
+    </footer>
+</body>
+</html>

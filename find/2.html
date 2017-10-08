@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <title>What phone?</title>
+ <link rel="stylesheet" href="/assets/style.css">
+ <link rel="stylesheet" href="/assets/nouislider-2.css">
+ <link rel="icon" href="/assets/icon.png">
+ <meta name="viewport" content="width=device-width, initial-scale=1">
+ <script async src="https://use.fontawesome.com/f47a842f2a.js"></script>
+</head>
+<body class="alt-body-color-3">
+    <script src="/assets/nouislider.min.js"></script>
+     <div class="center-all">
+        <h1>
+            <img src="/assets/icons8-screen-size.png" draggable="false"><br>
+            What size screen fits you best?
+        </h1>
+        <h2>Most phones have a screen size between 4 and 7 inches.</h2><br>
+        <div id="slider"></div>
+        <script async>
+            var slider = document.getElementById("slider");
+            slider.style.margin = "0px 30px";
+            noUiSlider.create(slider, {
+                range: {
+                    'min':4,
+                    'max':7,
+                },
+                start: [5.0, 6.5],
+                margin: 1,
+                connect: true,
+                step: 0.25,
+                pips: {
+                    mode: 'steps',
+                    stepped: true,
+                    density: 4
+                }
+            })
+        </script>
+        <a class="button" style="position: relative; top: 50px;" href="3.html">Next</a>
+    </div>
+    <footer>
+        <p><i class="fa fa-code"></i> Powered by <b>Open-Sourced Software</b></p>
+        <p class="right"><a>About</a> &mdash; <a>Credits</a> &mdash; <a>Terms</a></p>
+    </footer>
+</body>
+</html>

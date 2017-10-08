@@ -7,15 +7,31 @@ html {
 
 body {
     color: white;
-    background-color: #00a3c7;
+    background-color: #4d4dff;
     position: relative;
     margin: 0;
     padding-bottom: 3.5rem;
     min-height: 100%;
 }
 
-body.alt-body-color {
-    background-color: #D1335B;
+body.alt-body-color-1 {
+    background-color: #d20357;
+}
+
+body.alt-body-color-2 {
+    background-color: #ff8100;
+}
+
+body.alt-body-color-3 {
+    background-color: #24e91f;
+}
+
+body.alt-body-color-4 {
+    background-color: #bd77ff;
+}
+
+body.alt-body-color-5 {
+    background-color: #5b2fff;
 }
 
 * {
@@ -79,8 +95,22 @@ footer p.right {
 }
 
 @media (max-width: 550px) {
+    body {
+        padding-bottom: 5rem;
+    }
+
     .center-all {
         left: 0%;
         transform: translateX(0%) translateY(-50%);
+    }
+
+    footer p {
+        float: none;
+        text-align: center;
+    }
+
+    footer p.right {
+        float: none;
+        text-align: center;
     }
 }
