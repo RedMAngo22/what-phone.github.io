@@ -1,13 +1,32 @@
 @import url('https://fonts.googleapis.com/css?family=Karla');
 
+html {
+    height: 100%;
+    box-sizing: border-box;
+}
+
 body {
     color: white;
     background-color: #00a3c7;
+    position: relative;
+    margin: 0;
+    padding-bottom: 3.5rem;
+    min-height: 100%;
 }
 
 * {
     font-family: 'Karla', 'Whitney', sans-serif;
     font-weight: normal;
+}
+
+b {
+    font-weight: bold !important;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+    cursor: pointer;
 }
 
 .center-all {
@@ -30,4 +49,30 @@ button, .button {
 button:hover, .button:hover {
     background-color: white;
     color: #00a3c7;
+}
+
+footer {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    padding: 0px 1rem;
+    background-color: #333434;
+    color: white;
+
+}
+
+footer p {
+    float: left;
+}
+
+footer p.right {
+    float: right;
+}
+
+@media (max-width: 550px) {
+    .center-all {
+        left: 0%;
+        transform: translateX(0%) translateY(-50%);
+    }
 }
