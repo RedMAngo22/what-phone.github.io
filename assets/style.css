@@ -14,6 +14,10 @@ body {
     min-height: 100%;
 }
 
+body.alt-body-color {
+    background-color: #D1335B;
+}
+
 * {
     font-family: 'Karla', 'Whitney', sans-serif;
     font-weight: normal;
@@ -52,7 +56,7 @@ button, .button {
 
 button:hover, .button:hover {
     background-color: white;
-    color: #00a3c7;
+    color: black;
 }
 
 footer {
