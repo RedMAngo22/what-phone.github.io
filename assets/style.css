@@ -7,7 +7,7 @@ html {
 
 body {
     color: white;
-    background-color: #4d4dff;
+    background-color: #1967e9;
     position: relative;
     margin: 0;
     padding-bottom: 3.5rem;
@@ -32,6 +32,10 @@ body.alt-body-color-4 {
 
 body.alt-body-color-5 {
     background-color: #5b2fff;
+}
+
+body.error-bg {
+    background-color: #d62d20;
 }
 
 * {
@@ -93,6 +97,22 @@ footer p {
 footer p.right {
     float: right;
 }
+
+/* Credit to James Barnett for the custom checkbox CSS -- https://codepen.io/jamesbarnett/pen/yILjk */
+
+input[type=checkbox] { display:none; } /* to hide the checkbox itself */
+input[type=checkbox] + label:before {
+  font-family: FontAwesome;
+  display: inline-block;
+}
+
+input[type=checkbox] + label:before { content: "\f096"; } /* unchecked icon */
+input[type=checkbox] + label:before { letter-spacing: 10px; } /* space between checkbox and label */
+
+input[type=checkbox]:checked + label:before { content: "\f046"; } /* checked icon */
+input[type=checkbox]:checked + label:before { letter-spacing: 6px; } /* allow space for check mark */
+
+label { font-size: 18px; }
 
 @media (max-width: 550px) {
     body {
