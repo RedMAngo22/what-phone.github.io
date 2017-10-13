@@ -1,3 +1,8 @@
+/*
+Made possible by Open-Source coding.
+See https://what-phone.github.io/credits for attribution.
+*/
+
 @import url('https://fonts.googleapis.com/css?family=Karla');
 
 html {
@@ -36,6 +41,11 @@ body.alt-body-color-5 {
 
 body.error-bg {
     background-color: #d62d20;
+}
+
+body.no-color {
+    background-color: white;
+    color: black;
 }
 
 * {
@@ -98,8 +108,6 @@ footer p.right {
     float: right;
 }
 
-/* Credit to James Barnett for the custom checkbox CSS -- https://codepen.io/jamesbarnett/pen/yILjk */
-
 input[type=checkbox] { display:none; } /* to hide the checkbox itself */
 input[type=checkbox] + label:before {
   font-family: FontAwesome;
@@ -113,6 +121,49 @@ input[type=checkbox]:checked + label:before { content: "\f046"; } /* checked ico
 input[type=checkbox]:checked + label:before { letter-spacing: 6px; } /* allow space for check mark */
 
 label { font-size: 18px; }
+
+.topbar {
+  background: #41ade5;
+  padding: 1px;
+  padding-left: 15px;
+  color: #fff;
+  position: relative;
+  z-index: 1;
+  margin-bottom: 40px;
+}
+.topbar:after {
+  background: inherit;
+  bottom: 0;
+  content: '';
+  display: block;
+  height: 50%;
+  left: 0;
+  position: absolute;
+  right: 0;
+  transform: skewY(-1.5deg);
+  transform-origin: 100%;
+  z-index: -1;
+}
+
+.phone-selection {
+    width: 90%;
+    display: table;
+    margin: 5px;
+}
+
+.phone-img {
+    width: 30%;
+    display: table-cell;
+    padding: 20px;
+    float:left;
+}
+
+.phone-description {
+    width: 60%;
+    display: table-cell;
+    text-align: right;
+}
+
 
 @media (max-width: 550px) {
     body {
@@ -132,5 +183,9 @@ label { font-size: 18px; }
     footer p.right {
         float: none;
         text-align: center;
+    }
+
+    .phone-img {
+        display: none;
     }
 }

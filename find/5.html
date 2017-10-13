@@ -2,43 +2,42 @@
 <html>
 <head>
  <title>What phone?</title>
- <link rel="stylesheet" href="/assets/style.css">
- <link rel="stylesheet" href="/assets/nouislider.css">
- <link rel="icon" href="/assets/icon.png">
+ <link rel="stylesheet" href="../assets/style.css">
+ <link rel="stylesheet" href="../assets/nouislider-3.css">
+ <link rel="icon" href="../assets/icon.png">
  <meta name="viewport" content="width=device-width, initial-scale=1">
  <meta name="robots" content="none">
  <script async src="https://use.fontawesome.com/f47a842f2a.js"></script>
 </head>
-<body class="alt-body-color-2">
-    <script src="/assets/nouislider.min.js"></script>
+<body class="alt-body-color-3">
+    <script src="../assets/nouislider.min.js"></script>
      <div class="center-all">
         <h1>
-            <img src="/assets/icons8-coin.png" draggable="false"><br>
-            How much do you want to spend?
+            <img src="/assets/icons8-floppy-disk.png" draggable="false"><br>
+            How much storage do you need for your phone?
         </h1>
-        <h2>New phones can range in price from around $150 US, and can even reach up to $1000 US.</h2><br>
+        <h2>All phones come with a MicroSD card that can store 8 to 136 Gigabytes of data.</h2><br>
         <div id="slider"></div>
         <script async>
             var slider = document.getElementById("slider");
             slider.style.margin = "0px 30px";
             noUiSlider.create(slider, {
                 range: {
-                    'min':150,
-                    'max':1000,
+                    'min':16,
+                    'max':128,
                 },
-                start: [350, 700],
-                margin: 100,
-                limit: 700,
+                start: [16, 64],
+                margin: 32,
                 connect: true,
-                step: 50,
+                step: 16,
                 pips: {
                     mode: 'steps',
                     stepped: true,
-                    density: 4
+                    density: 2
                 }
             })
         </script>
-        <a class="button" style="position: relative; top: 50px;" href="2.html">Next</a>
+        <a class="button" style="position: relative; top: 50px;" href="/results">Finish</a>
     </div>
     <footer>
         <p><i class="fa fa-code"></i> Powered by <b>Open-Sourced Software</b></p>
