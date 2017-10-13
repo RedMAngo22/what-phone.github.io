@@ -155,7 +155,8 @@ label { font-size: 18px; }
     width: 30%;
     display: table-cell;
     padding: 20px;
-    float:left;
+    float: left;
+    text-align: center;
 }
 
 .phone-description {
