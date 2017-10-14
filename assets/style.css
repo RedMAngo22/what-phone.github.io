@@ -107,8 +107,8 @@ button:hover, .button:hover {
 }
 
 button.black-btn, .button.black-btn {
-    border: 1px solid black;
-    color: black;
+    border: 1px solid #41ade5;
+    color: #41ade5;
     position: relative;
     top: 0px;
 }
@@ -116,7 +116,7 @@ button.black-btn, .button.black-btn {
 button.black-btn:hover, .button.black-btn:hover {
     border: 1px solid white;
     color: white;
-    background-color: black;
+    background-color: #41ade5;
     transition: 0.3s;
     top: -2px;
 }
