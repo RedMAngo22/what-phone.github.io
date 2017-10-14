@@ -212,12 +212,10 @@ label { font-size: 18px; }
 .bg-container {
   background: #171F2C;
   padding: 1px;
-  padding-left: 15px;
   color: white;
   position: relative;
   z-index: 1;
-  margin-top: 20px;
-  margin-bottom: 40px;
+  margin: 40px 0;
   text-align: center;
 }
 
