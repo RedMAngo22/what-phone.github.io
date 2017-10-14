@@ -53,6 +53,10 @@ body.no-color {
     font-weight: normal;
 }
 
+*[secondary] {
+    color: gray;
+}
+
 b {
     font-weight: bold !important;
 }
@@ -70,9 +74,14 @@ a {
     transform: translateX(-50%) translateY(-50%);
     text-align: center;
 }
+
 #start {
     padding-left: 50px;
     padding-right: 50px;
+}
+
+#phone-img {
+    border-radius: 30px;
 }
 
 button, .button {
@@ -87,6 +96,35 @@ button, .button {
 button:hover, .button:hover {
     background-color: white;
     color: black;
+}
+
+.button.alt-btn {
+    padding: 6px 9px;
+    border-radius: 4px;
+    transition: 0.3s;
+    text-decoration: none;
+    position: relative;
+    top: 0px;
+}
+
+.button.alt-btn.amazon {
+    color: white;
+    background-color: #ff9900;
+}
+
+.button.alt-btn.google {
+    color: white;
+    background-color: #ea4335;
+}
+
+.button.alt-btn.best-buy {
+    color: white;
+    background-color: #003b64;
+}
+
+.button.alt-btn:hover {
+    position: relative;
+    top: -2px;
 }
 
 footer {
@@ -157,14 +195,15 @@ label { font-size: 18px; }
     padding: 20px;
     float: left;
     text-align: center;
+    transition: 0.5s;
 }
 
 .phone-description {
-    width: 60%;
+    width: 10%;
     display: table-cell;
     text-align: right;
+    transition: 0.7s;
 }
-
 
 @media (max-width: 550px) {
     body {

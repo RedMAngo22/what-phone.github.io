@@ -2,8 +2,8 @@
 <html>
 <head>
     <title>What phone?</title>
-    <link rel="stylesheet" href="/assets/style.css">
-    <link rel="icon" href="/assets/icon.png">
+    <link rel="stylesheet" href="../assets/style.css">
+    <link rel="icon" href="../assets/icon.png">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <script async src="https://use.fontawesome.com/f47a842f2a.js"></script>
 </head>
@@ -13,15 +13,45 @@
     </div>
     <div class="phone-selection">
         <div>
-            <div class="phone-img"><img style="max-height: 500px;" src="/assets/iphone.png"></div>
+            <div class="phone-img"><img id="phone-img" style="max-height: 500px;" src="../assets/iphone.png" draggable="false"></div>
             <div class="phone-description">
                 <h1>We're finding the perfect phone for you</h1>
                 <h2 style="color: gray">This won't take long</h2>
-                <img src="../assets/loading.svg">
+                <img src="../assets/loading.svg" draggable="false">
             </div>
         </div>
     </div>
+    <script defer>
+        window.onload = function() {
+            var desc = document.getElementsByClassName('phone-description')[0];
+            function reqListener () {
+                setTimeout(function() {
+                    desc.innerHTML = `
+                    <span secondary>We recommend...</span>
+                    <h1>iPhone 8</h1>
+                    <h2 secondary>Made by Apple</h2>
+                    <h3 secondary>
+                    <i class="fa fa-cogs"></i> iOS<br>
+                    <i class="fa fa-picture-o"></i> 4.7 inches<br>
+                    </h3>
+                    <br>
+                    <h2>Approximate price: $699</h2>
+                    <div class="shop">
+                        <a class="button alt-btn amazon">Amazon</a>
+                        <a class="button alt-btn google">Google</a>
+                        <a class="button alt-btn best-buy">Best Buy</a>
+                    </div>
+                    `;
+                    document.getElementById("phone-img").src = "../assets/iphone-8.png";
+                }, 1500);
+            }
 
+            var oReq = new XMLHttpRequest();
+            oReq.addEventListener("load", reqListener);
+            oReq.open("GET", "https://what-phone.github.io/data/data/phones/phones.json");
+            oReq.send();
+        }
+    </script>
     <footer>
         <p><i class="fa fa-code"></i> Powered by <b>Open-Sourced Software</b></p>
         <p class="right"><a href="/about">About</a> &mdash; <a href="/credits">Credits</a> &mdash; <a href="/terms">Terms</a></p>
