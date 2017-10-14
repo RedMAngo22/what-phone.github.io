@@ -75,6 +75,10 @@ a {
     text-align: center;
 }
 
+.main-content {
+    margin: 0 5px;
+}
+
 #start {
     padding-left: 50px;
     padding-right: 50px;
@@ -216,6 +220,28 @@ label { font-size: 18px; }
     display: table-cell;
     text-align: right;
     transition: 0.7s;
+}
+
+.team-member {
+    margin-bottom: 12px;
+}
+
+.team-member img {
+    border-radius: 50%;
+    height: 40px;
+    width: 40px;
+}
+
+.team-member span.name {
+    vertical-align: top;
+    font-size: 1.4em;
+    position: relative;
+    top: 8px;
+}
+
+.team-member span.title {
+    font-size: 1.2em;
+    color: gray;
 }
 
 @media (max-width: 550px) {
