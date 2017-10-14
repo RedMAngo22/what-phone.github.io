@@ -98,6 +98,19 @@ button:hover, .button:hover {
     color: black;
 }
 
+button.black-btn, .button.black-btn {
+    border: 1px solid black;
+    color: black;
+    position: relative;
+    top: 0px;
+}
+
+button.black-btn:hover, .button.black-btn:hover {
+    border: 1px solid black;
+    color: black;
+    top: -2px;
+}
+
 .button.alt-btn {
     padding: 6px 9px;
     border-radius: 4px;
