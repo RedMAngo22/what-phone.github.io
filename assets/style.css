@@ -163,6 +163,8 @@ footer {
 
 footer p {
     float: left;
+    color: white;
+    margin: 1em;
 }
 
 footer p.right {
