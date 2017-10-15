@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Terms - What phone?</title>
+    <link rel="stylesheet" href="../assets/style.css">
+    <link rel="icon" href="/assets/icon.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script async src="https://use.fontawesome.com/f47a842f2a.js"></script>
+</head>
+<body class="no-color">
+    <div class="topbar">
+        <h1><a href="/">Terms &mdash; What phone?</a></h1>
+    </div>
+    <div style="text-align: center" class="main-content">
+        <div id="document">
+            <span><i class="fa fa-cog fa-spin fa-fw"></i> Please wait</span>
+            <noscript><span style="color: red"><b>Oh no!</b> It looks like your browser doesn't support JavaScript.</span></noscript>
+        </div>
+        <script defer>
+        window.onload = function () {
+          try {
+              var news = new XMLHttpRequest()
+              news.open("GET", "https://docs.google.com/document/d/1IkmJIMjGfCGxZC_255vPcdyUq1q5kjWwyH4-GTW7vBo/pub?embedded=true", false);
+              news.onreadystatechange = function ()
+          {
+              if(news.readyState === 4)
+              {
+                console.info("embedded document returned " + String(news.status))
+                  if(news.status === 200 || news.status == 0)
+                  {
+                      var allText = news.responseText;
+                      document.getElementById("document").innerHTML = allText;
+                  }
+              }
+          }
+          news.send(null);
+          }
+          catch(e) {
+              if (window.console) {
+                console.error("Error while getting terms: " + String(e));
+          }
+          document.getElementById("document").innerHTML = "Error while getting terms: " + String(e);
+      }
+      }
+      </script>
+    </div>
+    <footer>
+        <p><i class="fa fa-code"></i> Powered by <b>Open-Sourced Software</b></p>
+        <p class="right"><a href="/about">About</a> &mdash; <a href="/credits">Credits</a> &mdash; <a href="/terms">Terms</a></p>
+    </footer>
+</body>
